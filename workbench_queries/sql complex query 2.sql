@@ -1,3 +1,4 @@
+use queryy1;
 -- create table employee
 -- ( emp_ID int primary key
 -- , emp_NAME varchar(50) not null
@@ -70,9 +71,7 @@
 -- UPDATE employee SET DOB = '1995-02-15', LAST_NAME='Kathiravel',CONTACT='8857462471',WORK_AREA='Coimbatore' where emp_Id=119;
 
 ## displaying details of employees with same work srea but in different departments
--- SELECT e1.emp_NAME,e1.WORK_AREA,e1.DEPT_NAME from employee e1 
--- join(select *, employee)x on e1.WORK_AREA = x.WORK_AREA and e1.emp_ID <> x.emp_Id;
-SELECT * FROM employee WHERE WORK_AREA IN (
-    SELECT a.WORK_AREA FROM employee a
-    INNER JOIN employee b on b.WORK_AREA = a.WORK_AREA AND b.SALARY <> a.SALARY
-)
+select distinct a.emp_ID,a.emp_NAME,a.WORK_AREA,a.DEPT_NAME
+from employee a, employee b
+where a.WORK_AREA = b.WORK_AREA and a.DEPT_NAME<>b.DEPT_NAME and a.emp_ID<>b.emp_ID
+order by b.WORK_AREA;
