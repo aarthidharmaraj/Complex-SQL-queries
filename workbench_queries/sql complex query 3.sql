@@ -6,7 +6,7 @@ use queryy1;
 
 -- insert into login_details values
 -- (101, 'Michael', current_date),
--- (102, 'James', current_date),
+-- (102, 'Jameswatt', current_date),
 -- (103, 'Stewart', current_date+1),
 -- (104, 'Stewart', current_date+1),
 -- (105, 'Stewart', current_date+1),
