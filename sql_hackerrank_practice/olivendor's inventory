@@ -11,7 +11,8 @@ Wands: The id is the id of the wand, code is the code of the wand, coins_needed 
 Wands_Property: The code is the code of the wand, age is the age of the wand, and is_evil denotes whether the wand is good for the dark arts. If the value of is_evil is 0, it means that the wand is not evil. The mapping between code and age is one-one, meaning that if there are two pairs,  and , then  and .
 
 Sample Input
-
+link:
+https://www.hackerrank.com/challenges/harry-potter-and-wands/problem?
 Wands Table:Wands_Property Table:
 
 Sample Output

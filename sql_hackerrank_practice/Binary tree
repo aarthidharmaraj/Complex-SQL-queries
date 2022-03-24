@@ -9,7 +9,8 @@ Leaf: If node is leaf node.
 Inner: If node is neither root nor leaf node.
 Sample Input
 
-
+link:
+https://www.hackerrank.com/challenges/binary-search-tree-1/problem?
 
 Sample Output
 
