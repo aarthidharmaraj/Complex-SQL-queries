@@ -1,0 +1,14 @@
+hacker rank query link:
+
+https://www.hackerrank.com/challenges/sql-projects/problem
+
+Solution:
+
+SET sql_mode=" ";
+select a.Start_Date, b.End_Date
+from 
+    (select Start_Date from  Projects where Start_Date NOT IN (select End_Date from Projects)) a,
+    (select End_Date from Projects where End_Date NOT IN (select Start_Date from Projects)) b 
+where a.Start_Date < b.End_Date
+GROUP BY a.Start_Date 
+ORDER BY DATEDIFF(b.End_Date, a.Start_Date), a.Start_Date;

@@ -1,0 +1,21 @@
+Hacker rank query link:
+https://www.hackerrank.com/challenges/placements/problem
+
+Solution:
+
+
+select st.name
+from Students st
+        join Friends f on st.ID=f.ID
+        join Packages P1 on st.ID=P1.ID
+       join Packages P2 on f.Friend_ID=P2.ID
+Where P2.Salary > P1.Salary
+Order By P2.Salary;
+
+    (or)
+
+select name 
+from 
+(select name,msal,p2.salary as fri_sal from 
+(select s.id,s.name as name,salary as msal,f.friend_id as fid from students s inner join packages p on s.id=p.id inner join friends f on s.id=f.id) temp inner join packages p2 on temp.fid=p2.id)
+temp2 where fri_sal > msal order by fri_sal;
